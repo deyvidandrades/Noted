@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DiretorioActivity">
+
+    <RelativeLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:colorPrimary"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/btn_voltar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_r16"
+            android:backgroundTint="?android:colorSecondary"
+            android:contentDescription="@string/adicionar_diretorio"
+            android:elevation="2dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            app:tint="?android:textColorSecondary" />
+
+        <TextView
+            android:id="@+id/tv_diretorio_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btn_deletar_diretorio"
+            android:layout_toEndOf="@+id/btn_voltar"
+            android:text="@string/noted"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_deletar_diretorio"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/adicionar_diretorio"
+            android:elevation="2dp"
+            android:padding="12dp"
+            app:tint="?android:textColorSecondary" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barra">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_anotacoes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="8dp" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/btn_adicionar_anotacao"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_r24"
+        android:contentDescription="@string/adicionar_diretorio"
+        android:elevation="2dp"
+        android:padding="24dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:tint="?android:textColor" />
+</RelativeLayout>

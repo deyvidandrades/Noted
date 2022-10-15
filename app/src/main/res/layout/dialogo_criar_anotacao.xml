@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?android:colorPrimary"
+    app:cardCornerRadius="24dp"
+    tools:context=".dialogos.DialogoCriarAnotacao">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="350dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_anotacao_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_r16"
+            android:backgroundTint="?android:colorSecondary"
+            android:hint="@string/escreva_alguma_coisa"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textLongMessage|textAutoCorrect|text"
+            android:minHeight="100dp"
+            android:minLines="5"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/text"
+            android:textColorHint="?android:textColorSecondary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="2dp"
+            android:text="@string/use_uma_hashtag_para_definir_o_titulo"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp"
+            app:drawableStartCompat="@drawable/ic_outline_info_24"
+            app:drawableTint="?android:textColorSecondary" />
+
+        <ImageView
+            android:id="@+id/btn_criar_anotacao"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="?android:colorSecondary"
+            android:contentDescription="@string/adicionar_diretorio"
+            android:padding="12dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="?android:textColor" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

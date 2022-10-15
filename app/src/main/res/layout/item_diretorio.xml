@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_diretorio"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/rounded_r24"
+    android:backgroundTint="?android:colorSecondary"
+    android:elevation="2dp"
+    android:minHeight="144dp"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/menu_diretorio"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/diretorio_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anota_es_pessoais"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/diretorio_num_anotacoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/placeholder_num"
+            android:textSize="64sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_diretorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/iv_privado"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@string/diretorio_privado"
+            android:src="@drawable/ic_outline_lock_24"
+            android:visibility="gone"
+            app:tint="?android:colorAccent" />
+
+        <ImageView
+            android:id="@+id/iv_not_privado"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/abrir_diretorio"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:tint="?android:colorAccent" />
+
+        <TextView
+            android:id="@+id/diretorio_num_palavras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/placeholder_num"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/diretorio_num_linhas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/placeholder_num"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

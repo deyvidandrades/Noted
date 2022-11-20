@@ -7,6 +7,9 @@
 
         <item name="android:colorSecondary">@color/secondary</item>
 
+
+        <item name="android:textColorTertiary">@color/secondary</item>
+
         <item name="android:textColor">@color/text</item>
         <item name="android:textColorSecondary">@color/text_secondary_dark</item>
 

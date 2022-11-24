@@ -30,9 +30,6 @@
 
         <activity android:name="com.dws.noted.activities.DiretorioActivity" />
 
-        <activity
-            android:name="com.dws.noted.activities.CriarDiretorioActivity"
-            android:theme="@android:style/Theme.Holo.Dialog" />
         <activity android:name="com.dws.noted.activities.ConfiguracoesActivity" />
     </application>
 

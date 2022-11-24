@@ -94,7 +94,6 @@
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/sw_tema_escuro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -133,11 +132,9 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_versao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:text="@string/v1_0_2"
                         android:textColor="?android:textColorSecondary"
                         android:textSize="12sp" />
 

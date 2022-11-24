@@ -32,6 +32,7 @@
             app:tint="?android:textColorSecondary" />
 
         <TextView
+            android:id="@+id/tvDiretorioTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -55,11 +56,13 @@
     </RelativeLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/barra">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAnotacoes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/lista_de_anota_es"
@@ -67,6 +70,7 @@
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ImageView
+        android:id="@+id/btnAdicionarAnotacao"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_alignParentEnd="true"

@@ -19,4 +19,5 @@
     <string name="voltar">Voltar</string>
     <string name="lista_de_diret_rios">Lista de diretórios</string>
     <string name="lista_de_anota_es">Lista de anotações</string>
+    <string name="use_uma_hashtag_para_definir_o_titulo">Use uma hashtag para definir o titulo.</string>
 </resources>

@@ -44,7 +44,6 @@
         android:gravity="end"
         android:orientation="vertical">
 
-
         <ImageView
             android:id="@+id/iv_privado"
             android:layout_width="18dp"
@@ -62,20 +61,30 @@
             android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
             app:tint="?android:colorAccent" />
 
-        <TextView
-            android:id="@+id/diretorio_num_palavras"
+        <!--todo remover dados-->
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/placeholder_num"
-            android:textColor="?android:textColorSecondary"
-            android:textSize="14sp" />
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
-        <TextView
-            android:id="@+id/diretorio_num_linhas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/placeholder_num"
-            android:textColor="?android:textColorSecondary"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/diretorio_num_palavras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/diretorio_num_linhas"
+                android:hint="@string/placeholder_num"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/diretorio_num_linhas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:hint="@string/placeholder_num"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
     </LinearLayout>
 </RelativeLayout>

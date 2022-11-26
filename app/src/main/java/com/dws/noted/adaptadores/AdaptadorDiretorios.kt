@@ -81,17 +81,70 @@ class AdaptadorDiretorios(
         holder.relativeDiretorio.setOnLongClickListener { v ->
             AnimacaoBotao.animar(v)
 
-            Persistencia.getInstance(
-                context.getSharedPreferences(
-                    "MAIN_DATA",
-                    Context.MODE_PRIVATE
-                )
-            ).removerDiretorio(item)
+            if (item.getPrivado())
+                autenticarParaRemocao(position, item)
+            else {
+                Persistencia.getInstance(
+                    context.getSharedPreferences(
+                        "MAIN_DATA",
+                        Context.MODE_PRIVATE
+                    )
+                ).removerDiretorio(item)
 
-            arrayList.remove(item)
-            notifyItemRemoved(position)
+                arrayList.remove(item)
+                notifyItemRemoved(position)
+            }
             true
         }
+    }
+
+    private fun autenticarParaRemocao(position: Int, item: Diretorio) {
+        executor = ContextCompat.getMainExecutor(activity)
+
+        biometricPrompt = BiometricPrompt(activity, executor,
+            object : BiometricPrompt.AuthenticationCallback() {
+                override fun onAuthenticationError(
+                    errorCode: Int,
+                    errString: CharSequence
+                ) {
+                    super.onAuthenticationError(errorCode, errString)
+                    Toast.makeText(
+                        context,
+                        "Falha ao autenticar", Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+                override fun onAuthenticationSucceeded(
+                    result: BiometricPrompt.AuthenticationResult
+                ) {
+                    Persistencia.getInstance(
+                        context.getSharedPreferences(
+                            "MAIN_DATA",
+                            Context.MODE_PRIVATE
+                        )
+                    ).removerDiretorio(item)
+
+                    arrayList.remove(item)
+                    notifyItemRemoved(position)
+                }
+
+                override fun onAuthenticationFailed() {
+                    super.onAuthenticationFailed()
+                    Toast.makeText(
+                        context, "Falha ao autenticar",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            })
+
+        promptInfo = BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Autenticação necessária!")
+            .setSubtitle("Para deletar esse diretório a autenticação é necessária.")
+            .setNegativeButtonText("Cancelar")
+            .build()
+
+        biometricPrompt.authenticate(promptInfo)
+
     }
 
     private fun autenticar(pos: Int) {

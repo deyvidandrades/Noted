@@ -11,7 +11,6 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.biometric.BiometricManager.Authenticators.*
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -20,18 +19,16 @@ import com.dws.noted.activities.DiretorioActivity
 import com.dws.noted.asistentes.AnimacaoBotao
 import com.dws.noted.objetos.Diretorio
 import com.dws.noted.persistencia.Persistencia
-import java.util.*
 import java.util.concurrent.Executor
 
 
 class AdaptadorDiretorios(
-    context: Context,
+    private val context: Context,
     arrayList: ArrayList<Diretorio>,
     private val activity: AppCompatActivity
 ) :
     RecyclerView.Adapter<AdaptadorDiretorios.ViewHolder>() {
 
-    private val context: Context
     private var arrayList: ArrayList<Diretorio> = ArrayList()
 
     private lateinit var executor: Executor
@@ -49,7 +46,7 @@ class AdaptadorDiretorios(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = arrayList[position]
 
-        holder.ivPivado.visibility = if (item.getPrivado()) View.VISIBLE else View.GONE
+        holder.ivPrivado.visibility = if (item.getPrivado()) View.VISIBLE else View.GONE
         holder.ivNotPrivado.visibility = if (item.getPrivado()) View.GONE else View.VISIBLE
 
         holder.tvNome.text = item.getNome()
@@ -196,31 +193,18 @@ class AdaptadorDiretorios(
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvNome: TextView
-        var tvNumAnotacoes: TextView
-        var tvNumPalavras: TextView
-        var tvNumLinhas: TextView
+        var tvNome: TextView = itemView.findViewById(R.id.diretorio_nome)
+        var tvNumAnotacoes: TextView = itemView.findViewById(R.id.diretorio_num_anotacoes)
+        var tvNumPalavras: TextView = itemView.findViewById(R.id.diretorio_num_palavras)
+        var tvNumLinhas: TextView = itemView.findViewById(R.id.diretorio_num_linhas)
 
-        var ivPivado: ImageView
-        var ivNotPrivado: ImageView
+        var ivPrivado: ImageView = itemView.findViewById(R.id.iv_privado)
+        var ivNotPrivado: ImageView = itemView.findViewById(R.id.iv_not_privado)
 
-        var relativeDiretorio: RelativeLayout
-
-        init {
-            tvNumAnotacoes = itemView.findViewById(R.id.diretorio_num_anotacoes)
-            tvNumPalavras = itemView.findViewById(R.id.diretorio_num_palavras)
-            tvNumLinhas = itemView.findViewById(R.id.diretorio_num_linhas)
-            tvNome = itemView.findViewById(R.id.diretorio_nome)
-
-            ivPivado = itemView.findViewById(R.id.iv_privado)
-            ivNotPrivado = itemView.findViewById(R.id.iv_not_privado)
-
-            relativeDiretorio = itemView.findViewById(R.id.relative_diretorio)
-        }
+        var relativeDiretorio: RelativeLayout = itemView.findViewById(R.id.relative_diretorio)
     }
 
     init {
-        this.context = context
         this.arrayList = arrayList
     }
 }

@@ -17,14 +17,13 @@ import com.dws.noted.persistencia.Persistencia
 import java.util.*
 
 class AdaptadorAnotacoes(
-    context: Context,
+    private val context: Context,
     arrayList: ArrayList<Anotacao>,
     private val fragmentManager: FragmentManager,
     private val indexDiretorio: Int
 ) :
     RecyclerView.Adapter<AdaptadorAnotacoes.ViewHolder>() {
 
-    private val context: Context
     private var arrayList: ArrayList<Anotacao> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -47,10 +46,7 @@ class AdaptadorAnotacoes(
 
         holder.liAnotacao.setOnClickListener { v ->
             AnimacaoBotao.animar(v)
-            //val intent = Intent(context, AnotacaoActivity::class.java)
-            //intent.putExtra("indexDiretorio", indexDiretorio)
-            //intent.putExtra("indexAnotacao", position)
-            //context.startActivity(intent)
+
             val newFragment: DialogoExibirAnotacao =
                 DialogoExibirAnotacao.newInstance(item)
 
@@ -86,21 +82,12 @@ class AdaptadorAnotacoes(
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvAnotacaoTitulo: TextView
-        var tvAnotacaoConteudo: TextView
-
-        var liAnotacao: LinearLayout
-
-        init {
-            tvAnotacaoTitulo = itemView.findViewById(R.id.tv_anotacao_titulo)
-            tvAnotacaoConteudo = itemView.findViewById(R.id.tv_anotacao_conteudo)
-
-            liAnotacao = itemView.findViewById(R.id.item_anotacao)
-        }
+        var tvAnotacaoConteudo: TextView = itemView.findViewById(R.id.tv_anotacao_conteudo)
+        var tvAnotacaoTitulo: TextView = itemView.findViewById(R.id.tv_anotacao_titulo)
+        var liAnotacao: LinearLayout = itemView.findViewById(R.id.item_anotacao)
     }
 
     init {
-        this.context = context
         this.arrayList = arrayList
     }
 }

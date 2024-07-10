@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Noted" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
@@ -20,7 +20,7 @@
         <item name="android:statusBarColor">@color/text_terciary</item>
 
         <item name="android:navigationBarColor">@color/text_secondary</item>
-        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightNavigationBar" >true</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

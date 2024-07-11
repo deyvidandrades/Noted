@@ -28,6 +28,7 @@ class DialogoEditarAnotacao : BottomSheetDialogFragment() {
 
         if (anotacao != null) {
             etEditarAnotacao.setText(anotacao!!.conteudo)
+            etCategoriaAnotacao.setText(anotacao!!.categoria)
             tvData.text = DataUtil.getDataFormatada(anotacao!!.timestamp)
         }
 

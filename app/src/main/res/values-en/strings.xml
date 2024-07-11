@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acao_de_adicionar_uma_anotacao">Action of adding a note</string>
+    <string name="salvar">Save</string>
+    <string name="faca_uma_anotacao">Create a note</string>
+    <string name="escolha_uma_categoria_opcional">Chose a tag (optional)</string>
+    <string name="salvar_e_fechar">Save and close</string>
+    <string name="termos_e_condicoes">Terms and conditions</string>
+    <string name="proteger_anotacoes_com_senha">Protect your notes with a password</string>
+    <string name="aceitar_e_continuar">Accept and continue</string>
+    <string name="leia_nossos">Read our</string>
+    <string name="clicando_em_continuar">Clicking in continue, you are also agreeing with our terms and conditions</string>
+    <string name="person_adding_notes">Person adding notes</string>
+    <string name="salve_suas_anotacoes">Save your notes</string>
+    <string name="seja_bem_vindo">Welcome!</string>
+    <string name="ilustracao_de_autenticacao">Authentication illustration</string>
+    <string name="o_proprietario_solicitou">The owner required the notes to be private</string>
+    <string name="autenticacao_necessaria">Authentication required</string>
+    <string name="image_of_a_padlock">image of a padlock</string>
+    <string name="falha_ao_autenticar">Authentication failure</string>
+    <string name="autenticacao">Authentication</string>
+    <string name="para_acessar_as_anotacoes">To access the notes authentication is necessary</string>
+    <string name="cancelar">Cancel</string>
+    <string name="anotacoes_e_caracteres">%1$s notes e %2$s characters.</string>
+    <string name="default_">default</string>
+    <string name="item_removido">Item removed</string>
+    <string name="categorias">Categories</string>
+    <string name="anotacoes">Notes</string>
+    <string name="settings">Settings</string>
+</resources>

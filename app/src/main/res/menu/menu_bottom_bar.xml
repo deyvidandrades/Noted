@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_1"
+        android:enabled="true"
+        android:icon="@drawable/rounded_file_copy_24"
+        android:title="@string/anotacoes"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_2"
+        android:enabled="true"
+        android:icon="@drawable/rounded_category_24"
+        android:title="@string/categorias"
+        app:showAsAction="ifRoom" />
+</menu>

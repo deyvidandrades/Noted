@@ -1,23 +1,33 @@
 <resources>
-    <string name="app_name">Noted</string>
-    <!-- Strings used for fragments for navigation -->
+    <string name="app_name" translatable="false">Noted</string>
+    <string name="url_termos" translatable="false">https://deyvidandrades.github.io/Noted/termos/</string>
 
-    <string name="placeholder_num">23</string>
-    <string name="abrir_diretorio">abrir diretorio</string>
-    <string name="anota_es_pessoais">anotações pessoais</string>
-    <string name="adicionar_diretorio">adicionar diretorio</string>
-    <string name="placeholder_anotacao"><b>heyBuddy - ideia app 14/01</b> \n\nApp to track good and bad days; social net; notify friends of status;people can send messages on bad ones </string>
-    <string name="noted">noted</string>
-    <string name="titulo">Titulo</string>
-    <string name="escreva_alguma_coisa">Escreva alguma coisa\.\.\.\n\n\n\n</string>
-    <string name="diretorio_privado">Diretorio privado</string>
-    <string name="configuracoes">configurações</string>
-    <string name="tema">Tema</string>
-    <string name="tema_escuro">Tema escuro</string>
-    <string name="por_deyvidandrades">por @deyvidandrades</string>
-    <string name="abrir_as_configura_es">Abrir as configurações</string>
-    <string name="voltar">Voltar</string>
-    <string name="lista_de_diret_rios">Lista de diretórios</string>
-    <string name="lista_de_anota_es">Lista de anotações</string>
-    <string name="use_uma_hashtag_para_definir_o_titulo">Use uma hashtag para definir o titulo.</string>
+    <string name="acao_de_adicionar_uma_anotacao">Ação de adicionar uma anotação</string>
+    <string name="salvar">Salvar</string>
+    <string name="faca_uma_anotacao">Faça uma anotação</string>
+    <string name="escolha_uma_categoria_opcional">Escolha uma categoria (opcional)</string>
+    <string name="salvar_e_fechar">Salvar e fechar</string>
+    <string name="termos_e_condicoes">Termos e condições</string>
+    <string name="proteger_anotacoes_com_senha">Proteger anotações com senha</string>
+    <string name="dark_mode" translatable="false">Dark mode</string>
+    <string name="aceitar_e_continuar">Aceitar e continuar</string>
+    <string name="leia_nossos">Leia nossos</string>
+    <string name="clicando_em_continuar">Clicando em continuar, você está aceitando nossos termos e condições</string>
+    <string name="person_adding_notes">Pessoa adicionando anotações</string>
+    <string name="salve_suas_anotacoes">Salve suas anotações</string>
+    <string name="seja_bem_vindo">Seja bem vindo!</string>
+    <string name="ilustracao_de_autenticacao">Ilustração de autenticação</string>
+    <string name="o_proprietario_solicitou">O proprietário solicitou que o acesso seja controlado com senha.</string>
+    <string name="autenticacao_necessaria">Autenticação necessária</string>
+    <string name="image_of_a_padlock">Imagem de um cadeado</string>
+    <string name="falha_ao_autenticar">Falha ao autenticar</string>
+    <string name="autenticacao">Autenticação</string>
+    <string name="para_acessar_as_anotacoes">Para acessar as anotações a autenticação é necessária.</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="anotacoes_e_caracteres">%1$s anotações e %2$s caracteres.</string>
+    <string name="default_">padrão</string>
+    <string name="item_removido">Item removido</string>
+    <string name="categorias">Categorias</string>
+    <string name="anotacoes">Anotações</string>
+    <string name="settings">Configurações</string>
 </resources>

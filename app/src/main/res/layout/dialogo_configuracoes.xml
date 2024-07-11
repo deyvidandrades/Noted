@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_r24_top"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_r16"
+        android:backgroundTint="?android:colorAccent" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_dark_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_r16_outline"
+        android:checked="true"
+        android:drawableStart="@drawable/rounded_dark_mode_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:text="@string/dark_mode" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_privado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_r16_outline"
+        android:checked="true"
+        android:drawableStart="@drawable/rounded_lock_24"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:text="@string/proteger_anotacoes_com_senha" />
+
+    <TextView
+        android:id="@+id/tv_termos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="24dp"
+        android:background="@drawable/rounded_r16_outline"
+        android:padding="16dp"
+        android:text="@string/termos_e_condicoes"
+        android:textSize="16sp"
+        app:drawableEndCompat="@drawable/rounded_keyboard_arrow_right_24"
+        app:drawableTint="?android:colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_versao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btn_salvar"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="24dp"
+        android:text="@string/salvar_e_fechar" />
+</LinearLayout>

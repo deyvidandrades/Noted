@@ -11,8 +11,8 @@ android {
         applicationId = "com.deyvidandrades.noted"
         minSdk = 31
         targetSdk = 34
-        versionCode = 5
-        versionName = "1.1.0"
+        versionCode = 6
+        versionName = "1.1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

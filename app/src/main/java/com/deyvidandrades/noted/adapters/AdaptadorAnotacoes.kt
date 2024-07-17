@@ -34,8 +34,8 @@ class AdaptadorAnotacoes(
         val item = arrayList[position]
 
         holder.tvConteudo.text = item.conteudo
-        holder.tvCategoria.text = "#${item.categoria}"
-        holder.tvCategoria.visibility = if (item.categoria != "") View.VISIBLE else View.GONE
+        holder.tvCategoria.text =
+            if (item.categoria != "") "#${item.categoria}" else context.getString(R.string.default_)
 
         holder.tvData.text = DataUtil.getDataFormatada(item.timestamp)
 

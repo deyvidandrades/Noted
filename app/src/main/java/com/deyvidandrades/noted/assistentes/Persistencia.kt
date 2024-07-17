@@ -21,6 +21,27 @@ object Persistencia {
     fun getInstance(context: Context) {
         preferences = context.getSharedPreferences("MAIN_DATA", Context.MODE_PRIVATE)
         carregarDados()
+
+        /*
+        arrayAnotacoes.add(
+            Anotacao(
+                "Lembrar de enviar o relatório de desempenho até sexta-feira",
+                "Trabalho",
+                1689177600000
+            )
+        )
+
+        arrayAnotacoes.add(Anotacao("Comprar ingressos para o cinema no fim de semana", "", 1689350400000))
+        arrayAnotacoes.add(Anotacao("Trocar as lâmpadas queimadas na cozinha", "Casa", 1689436800000))
+        arrayAnotacoes.add(Anotacao("Revisar os capítulos 3 e 4 para a próxima prova", "Estudos", 1689609600000))
+        arrayAnotacoes.add(Anotacao("Participar da reunião de equipe às 14h na terça-feira", "Trabalho", 1689696000000))
+        arrayAnotacoes.add(Anotacao("Comprar ingredientes para o jantar de sexta-feira", "", 1689782400000))
+        arrayAnotacoes.add(Anotacao("Enviar o orçamento para o cliente até quarta-feira", "Trabalho", 1690300800000))
+        arrayAnotacoes.add(Anotacao("Consertar a torneira que está vazando no banheiro", "Casa", 1690646400000))
+        arrayAnotacoes.add(Anotacao("Organizar as finanças e preparar o orçamento mensal", "", 1690732800000))
+        arrayAnotacoes.add(Anotacao("Estudar pelo menos 30 minutos de russo todos os dias", "", 1690819200000))
+        salvarDados()
+        */
     }
 
     /*FLUXO DADOS*/

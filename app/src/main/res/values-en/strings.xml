@@ -22,7 +22,7 @@
     <string name="para_acessar_as_anotacoes">To access the notes authentication is necessary</string>
     <string name="cancelar">Cancel</string>
     <string name="anotacoes_e_caracteres">%1$s notes e %2$s characters.</string>
-    <string name="default_">default</string>
+    <string name="default_">Default</string>
     <string name="item_removido">Item removed</string>
     <string name="categorias">Categories</string>
     <string name="anotacoes">Notes</string>

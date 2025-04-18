@@ -26,7 +26,7 @@ class FragmentCategorias : Fragment(R.layout.fragment_categorias), OnAdapterItem
 
         //Recycler Eventos
         val recycler: RecyclerView = view.findViewById(R.id.recycler)
-        adaptadorCategorias = AdaptadorCategorias(requireContext(), arrayCategorias, this)
+        adaptadorCategorias = AdaptadorCategorias(requireContext(), arrayCategorias)
 
         recycler.setHasFixedSize(false)
         recycler.adapter = adaptadorCategorias

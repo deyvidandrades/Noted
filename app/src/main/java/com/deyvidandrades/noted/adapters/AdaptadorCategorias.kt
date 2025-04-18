@@ -12,17 +12,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.deyvidandrades.noted.R
 import com.deyvidandrades.noted.dataclasses.Categoria
 import com.deyvidandrades.noted.dialogs.DialogoAnotacoesCategoria
-import com.deyvidandrades.noted.interfaces.OnAdapterItemClickListener
 
 
 class AdaptadorCategorias(
     private val context: Context,
-    arrayList: ArrayList<Categoria>,
-    listener: OnAdapterItemClickListener
+    arrayList: ArrayList<Categoria>
 ) :
     RecyclerView.Adapter<AdaptadorCategorias.ViewHolder>() {
     private var arrayList: ArrayList<Categoria> = ArrayList()
-    private val listener: OnAdapterItemClickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View = LayoutInflater.from(context).inflate(R.layout.item_categoria, parent, false)
@@ -64,6 +61,5 @@ class AdaptadorCategorias(
 
     init {
         this.arrayList = arrayList
-        this.listener = listener
     }
 }

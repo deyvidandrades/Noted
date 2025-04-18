@@ -9,12 +9,10 @@ android {
 
     defaultConfig {
         applicationId = "com.deyvidandrades.noted"
-        minSdk = 31
-        targetSdk = 34
-        versionCode = 6
-        versionName = "1.1.1"
         minSdk = 33
         targetSdk = 35
+        versionCode = 7
+        versionName = "1.1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -35,7 +35,7 @@ class AdaptadorAnotacoes(
 
         holder.tvConteudo.text = item.conteudo
         holder.tvCategoria.text =
-            if (item.categoria != "") "#${item.categoria}" else context.getString(R.string.default_)
+            if (item.categoria != "") "#${item.categoria}" else "#${context.getString(R.string.default_)}"
 
         holder.tvData.text = DataUtil.getDataFormatada(item.timestamp)
 

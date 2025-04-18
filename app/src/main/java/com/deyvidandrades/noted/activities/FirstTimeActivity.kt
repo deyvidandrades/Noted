@@ -1,12 +1,12 @@
 package com.deyvidandrades.noted.activities
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import com.deyvidandrades.noted.R
 import com.deyvidandrades.noted.assistentes.Persistencia
 
@@ -27,7 +27,7 @@ class FirstTimeActivity : AppCompatActivity() {
         }
 
         tvTermos.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.url_termos))))
+            startActivity(Intent(Intent.ACTION_VIEW, getString(R.string.url_termos).toUri()))
         }
     }
 }

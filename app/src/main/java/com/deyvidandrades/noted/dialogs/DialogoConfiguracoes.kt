@@ -3,7 +3,6 @@ package com.deyvidandrades.noted.dialogs
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.net.toUri
 import com.deyvidandrades.noted.R
 import com.deyvidandrades.noted.assistentes.AnimacaoBotao
 import com.deyvidandrades.noted.assistentes.Persistencia
@@ -43,7 +43,7 @@ class DialogoConfiguracoes : BottomSheetDialogFragment() {
         tvAbrirTermos.setOnClickListener {
             AnimacaoBotao.animar(it)
             //todo
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.url_termos))))
+            startActivity(Intent(Intent.ACTION_VIEW, getString(R.string.url_termos).toUri()))
         }
 
         btnSalvar.setOnClickListener {

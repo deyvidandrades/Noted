@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.deyvidandrades.noted"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.deyvidandrades.noted"
@@ -13,6 +13,8 @@ android {
         targetSdk = 34
         versionCode = 6
         versionName = "1.1.1"
+        minSdk = 33
+        targetSdk = 35
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,21 +36,21 @@ android {
 
 dependencies {
     //Core libs
-    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
 
     //Android widgets
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-beta01")
     implementation ("androidx.biometric:biometric:1.2.0-alpha05")
 
     //Outras bibliotecas
     implementation("com.google.code.gson:gson:2.11.0")
-    implementation("com.google.android.play:review:2.0.1")
-    implementation("com.google.android.play:review-ktx:2.0.1")
+    implementation("com.google.android.play:review:2.0.2")
+    implementation("com.google.android.play:review-ktx:2.0.2")
 
     //Test libraries
     testImplementation("junit:junit:4.13.2")
